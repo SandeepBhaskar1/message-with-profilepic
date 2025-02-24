@@ -160,6 +160,9 @@ const Dashboard = () => {
         return <div>Loading...</div>;
     }
 
+    console.log(posts);
+    
+
     return (
         <div className="p-4 border-b-1 relative">
             <h3 className="text-xl font-bold mb-4">Welcome to the Dashboard</h3>
@@ -195,6 +198,7 @@ const Dashboard = () => {
                 <div className="space-y-4">
                     {posts.map(post => (
                         <div key={post._id} className="border p-4 rounded shadow-md">
+                        <img src={getProfilePicUrl(post.author.profilePic)} alt={`${post.author.firstName}'s profile pic`} className='w-8 h-8 rounded-full' />
                             <p className="font-bold">{capitalizeName(post.author.firstName)} {capitalizeName(post.author.lastName)}:</p>
                             <h5 className="font-medium">{post.title}</h5>
                             <p>{post.content}</p>
