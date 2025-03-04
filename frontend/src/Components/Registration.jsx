@@ -26,7 +26,7 @@ const Registration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`${BACKEND_URL}/register`, {
+      const response = await fetch(`$https://message-with-profilepic.onrender.com/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

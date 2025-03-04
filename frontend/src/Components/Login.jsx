@@ -32,7 +32,7 @@ const Login = () => {
         setErrorMessage('');
 
         try {
-            const response = await fetch(`${BACKEND_URL}/login`, {
+            const response = await fetch(`https://message-with-profilepic.onrender.com/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

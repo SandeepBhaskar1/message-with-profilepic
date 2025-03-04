@@ -20,7 +20,7 @@ const Dashboard = () => {
     useEffect(() => {
         const checkAuthentication = async () => {
             try {
-                const response = await fetch(`${BACKEND_URL}/checkAuth`, {
+                const response = await fetch(`https://message-with-profilepic.onrender.com/checkAuth`, {
                     credentials: 'include',
                     headers: {
                         'Accept': 'application/json',
@@ -64,7 +64,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await fetch(`${BACKEND_URL}/posts`, {
+                const response = await fetch(`https://message-with-profilepic.onrender.com/posts`, {
                     credentials: 'include',
                     headers: {
                         'Accept': 'application/json',
@@ -87,7 +87,7 @@ const Dashboard = () => {
 
     const handleLogout = async () => {
         try {
-            const response = await fetch(`${BACKEND_URL}/logout`, {
+            const response = await fetch(`https://message-with-profilepic.onrender.com/logout`, {
                 method: 'POST',
                 credentials: 'include',
             });
@@ -111,7 +111,7 @@ const Dashboard = () => {
         }
 
         try {
-            const response = await fetch(`${BACKEND_URL}/post`, {
+            const response = await fetch(`https://message-with-profilepic.onrender.com/post`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

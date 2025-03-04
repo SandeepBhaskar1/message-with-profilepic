@@ -13,7 +13,7 @@ const Profile = () => {
     useEffect(() => {
         const fetchUserData = async () => {
             try {
-                const response = await fetch(`${BACKEND_URL}/user`, {
+                const response = await fetch(`https://message-with-profilepic.onrender.com/user`, {
                     credentials: 'include',
                     headers: {
                         'Accept': 'application/json',
@@ -51,7 +51,7 @@ const Profile = () => {
         setIsUploading(true);
 
         try {
-            const response = await fetch(`${BACKEND_URL}/uploadProfilePic`, {
+            const response = await fetch(`https://message-with-profilepic.onrender.com/uploadProfilePic`, {
                 method: 'POST',
                 credentials: 'include',
                 body: formData,
