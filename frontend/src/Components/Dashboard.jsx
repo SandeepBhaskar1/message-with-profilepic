@@ -160,9 +160,6 @@ const Dashboard = () => {
         return <div>Loading...</div>;
     }
 
-    console.log(posts);
-    
-
     return (
         <div className="p-4 border-b-1 relative">
             <h3 className="text-xl font-bold mb-4">Welcome to the Dashboard</h3>

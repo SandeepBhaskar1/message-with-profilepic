@@ -26,13 +26,13 @@ const Registration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(`$https://message-with-profilepic.onrender.com/register`, {
+      const response = await fetch(`https://message-with-profilepic.onrender.com/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(user)
-      }); console.log('User Data:', user);
+      });
 
       const result = await response.json();
       if (response.ok) {
